@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+
+            <!-- Avatar head -->
+            <group android:name="avatar_group">
+                <path
+                    android:name="user_head"
+                    android:pathData="M11.985,12.006C14.523,12.006 16.58,9.948 16.58,7.41C16.58,4.872 14.523,2.814 11.985,2.814C9.447,2.814 7.389,4.872 7.389,7.41C7.38,9.939 9.424,11.997 11.952,12.006H11.985Z"
+                    android:strokeLineJoin="round"
+                    android:strokeWidth="1.5"
+                    android:fillColor="#00000000"
+                    android:fillType="evenOdd"
+                    android:strokeColor="#848A94"
+                    android:strokeLineCap="round"/>
+            </group>
+
+            <!-- Body -->
+            <group android:name="body_group">
+                <path
+                    android:name="user_body"
+                    android:pathData="M11.985,15.346C8.117,15.346 4.814,15.931 4.814,18.273C4.814,20.615 8.096,21.221 11.985,21.221C15.852,21.221 19.154,20.635 19.154,18.294C19.154,15.953 15.873,15.346 11.985,15.346Z"
+                    android:strokeLineJoin="round"
+                    android:strokeWidth="1.5"
+                    android:fillColor="#00000000"
+                    android:fillType="evenOdd"
+                    android:strokeColor="#848A94"
+                    android:strokeLineCap="round"/>
+            </group>
+
+            <!-- Glow (just visually present, no animation now) -->
+            <group android:name="glow_group" android:alpha="0">
+                <path
+                    android:name="head_glow"
+                    android:pathData="M11.985,12.006C14.523,12.006 16.58,9.948 16.58,7.41C16.58,4.872 14.523,2.814 11.985,2.814C9.447,2.814 7.389,4.872 7.389,7.41C7.38,9.939 9.424,11.997 11.952,12.006H11.985Z"
+                    android:strokeLineJoin="round"
+                    android:strokeWidth="3"
+                    android:fillColor="#00000000"
+                    android:fillType="evenOdd"
+                    android:strokeColor="#5A6CF3"
+                    android:strokeLineCap="round"/>
+                <path
+                    android:name="body_glow"
+                    android:pathData="M11.985,15.346C8.117,15.346 4.814,15.931 4.814,18.273C4.814,20.615 8.096,21.221 11.985,21.221C15.852,21.221 19.154,20.635 19.154,18.294C19.154,15.953 15.873,15.346 11.985,15.346Z"
+                    android:strokeLineJoin="round"
+                    android:strokeWidth="3"
+                    android:fillColor="#00000000"
+                    android:fillType="evenOdd"
+                    android:strokeColor="#5A6CF3"
+                    android:strokeLineCap="round"/>
+            </group>
+        </vector>
+    </aapt:attr>
+
+    <!-- Animate head -->
+    <target android:name="user_head">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="strokeColor"
+                    android:duration="600"
+                    android:valueFrom="#848A94"
+                    android:valueTo="#5A6CF3"
+                    android:repeatMode="reverse"
+                    android:repeatCount="1"
+                    android:valueType="colorType"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="strokeWidth"
+                    android:duration="400"
+                    android:valueFrom="1.5"
+                    android:valueTo="2.2"
+                    android:repeatMode="reverse"
+                    android:repeatCount="1"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+            </set>
+        </aapt:attr>
+    </target>
+
+    <!-- Animate body -->
+    <target android:name="user_body">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="strokeColor"
+                    android:duration="600"
+                    android:valueFrom="#848A94"
+                    android:valueTo="#5A6CF3"
+                    android:startOffset="150"
+                    android:repeatMode="reverse"
+                    android:repeatCount="1"
+                    android:valueType="colorType"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="strokeWidth"
+                    android:duration="400"
+                    android:valueFrom="1.5"
+                    android:valueTo="2.2"
+                    android:startOffset="100"
+                    android:repeatMode="reverse"
+                    android:repeatCount="1"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>

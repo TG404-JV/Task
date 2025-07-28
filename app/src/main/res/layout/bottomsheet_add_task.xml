@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    android:background="@drawable/bottomsheet_bg"
+    tools:context=".fragments.bottomsheet.BottomsheetAddTask"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/taskList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvAddTask"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            style="@style/list_card_secondary">
+
+            <RelativeLayout
+                android:layout_marginStart="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+                <ImageView
+                    android:id="@+id/ivTask"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_edit"/>
+
+                <TextView
+                    android:id="@+id/tvTask"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/ivTask"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:text="add task"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="15sp"/>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvAddProject"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            style="@style/list_card_secondary">
+
+            <RelativeLayout
+                android:layout_marginStart="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+                <ImageView
+                    android:id="@+id/ivProject"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_plus"/>
+
+                <TextView
+                    android:id="@+id/tvProject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/ivProject"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:text="Add Project"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="15sp"/>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvCreateTeam"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            style="@style/list_card_secondary">
+
+            <RelativeLayout
+                android:layout_marginStart="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+                <ImageView
+                    android:id="@+id/ivTeam"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_three_user"/>
+
+                <TextView
+                    android:id="@+id/tvTeam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/ivTeam"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:text="Create Team"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="15sp"/>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvCreateEvent"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            style="@style/list_card_secondary">
+
+            <RelativeLayout
+                android:layout_marginStart="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+                <ImageView
+                    android:id="@+id/ivEvent"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_time_circle"/>
+
+                <TextView
+                    android:id="@+id/tvEvent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/ivEvent"
+                    android:layout_marginStart="10dp"
+                    android:layout_centerVertical="true"
+                    android:text="Create Event"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="15sp"/>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:cardBackgroundColor="@color/close_card_button"
+            app:cardCornerRadius="30dp"
+            android:layout_gravity="center"
+            app:cardElevation="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_close"
+                android:layout_gravity="center"/>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frameContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+
+
+</LinearLayout>

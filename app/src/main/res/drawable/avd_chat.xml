@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector xmlns:android="http://schemas.android.com/apk/res/android"
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+
+            <!-- Chat bubble outline -->
+            <path
+                android:name="bubble"
+                android:pathData="M19.071,19.07C16.015,22.126 11.49,22.787 7.786,21.074C7.24,20.854 6.791,20.676 6.365,20.676C5.178,20.683 3.701,21.834 2.933,21.067C2.166,20.299 3.317,18.821 3.317,17.627C3.317,17.2 3.146,16.76 2.926,16.212C1.213,12.51 1.874,7.983 4.93,4.927C8.832,1.024 15.17,1.024 19.071,4.926C22.98,8.835 22.973,15.168 19.071,19.07Z"
+                android:strokeLineJoin="round"
+                android:strokeWidth="1.5"
+                android:fillColor="#00000000"
+                android:fillType="evenOdd"
+                android:strokeColor="#848A94"
+                android:strokeLineCap="round"/>
+
+            <!-- Typing dots group -->
+            <group android:name="dots_group">
+                <!-- First dot -->
+                <path
+                    android:name="dot1"
+                    android:pathData="M7.925,12.413C7.925,12.413 7.925,12.413 7.925,12.413"
+                    android:strokeLineJoin="round"
+                    android:strokeWidth="1.5"
+                    android:fillColor="#00000000"
+                    android:strokeColor="#848A94"
+                    android:strokeLineCap="round"/>
+
+                <!-- Second dot -->
+                <path
+                    android:name="dot2"
+                    android:pathData="M11.935,12.413C11.935,12.413 11.935,12.413 11.935,12.413"
+                    android:strokeLineJoin="round"
+                    android:strokeWidth="1.5"
+                    android:fillColor="#00000000"
+                    android:strokeColor="#848A94"
+                    android:strokeLineCap="round"/>
+
+                <!-- Third dot -->
+                <path
+                    android:name="dot3"
+                    android:pathData="M15.944,12.413C15.944,12.413 15.944,12.413 15.944,12.413"
+                    android:strokeLineJoin="round"
+                    android:strokeWidth="1.5"
+                    android:fillColor="#00000000"
+                    android:strokeColor="#848A94"
+                    android:strokeLineCap="round"/>
+            </group>
+        </vector>
+    </aapt:attr>
+
+    <!-- Bubble pulse animation -->
+    <target android:name="bubble">
+        <aapt:attr name="android:animation">
+            <set xmlns:android="http://schemas.android.com/apk/res/android"
+                android:repeatCount="infinite"
+                android:repeatMode="reverse">
+                <objectAnimator
+                    android:propertyName="strokeColor"
+                    android:duration="2000"
+                    android:valueFrom="#848A94"
+                    android:valueTo="#5A6CF3"
+                    android:valueType="colorType"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+            </set>
+        </aapt:attr>
+    </target>
+
+    <!-- First dot animation -->
+    <target android:name="dot1">
+        <aapt:attr name="android:animation">
+            <set xmlns:android="http://schemas.android.com/apk/res/android"
+                android:repeatCount="infinite">
+                <objectAnimator
+                    android:propertyName="strokeWidth"
+                    android:duration="600"
+                    android:valueFrom="1.5"
+                    android:valueTo="4.0"
+                    android:repeatMode="reverse"
+                    android:repeatCount="infinite"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="strokeColor"
+                    android:duration="600"
+                    android:valueFrom="#848A94"
+                    android:valueTo="#5A6CF3"
+                    android:repeatMode="reverse"
+                    android:repeatCount="infinite"
+                    android:valueType="colorType"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+            </set>
+        </aapt:attr>
+    </target>
+
+    <!-- Second dot animation (with delay) -->
+    <target android:name="dot2">
+        <aapt:attr name="android:animation">
+            <set xmlns:android="http://schemas.android.com/apk/res/android"
+                android:repeatCount="infinite">
+                <objectAnimator
+                    android:propertyName="strokeWidth"
+                    android:duration="600"
+                    android:valueFrom="1.5"
+                    android:valueTo="4.0"
+                    android:startOffset="200"
+                    android:repeatMode="reverse"
+                    android:repeatCount="infinite"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="strokeColor"
+                    android:duration="600"
+                    android:valueFrom="#848A94"
+                    android:valueTo="#5A6CF3"
+                    android:startOffset="200"
+                    android:repeatMode="reverse"
+                    android:repeatCount="infinite"
+                    android:valueType="colorType"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+            </set>
+        </aapt:attr>
+    </target>
+
+    <!-- Third dot animation (with more delay) -->
+    <target android:name="dot3">
+        <aapt:attr name="android:animation">
+            <set xmlns:android="http://schemas.android.com/apk/res/android"
+                android:repeatCount="infinite">
+                <objectAnimator
+                    android:propertyName="strokeWidth"
+                    android:duration="600"
+                    android:valueFrom="1.5"
+                    android:valueTo="4.0"
+                    android:startOffset="400"
+                    android:repeatMode="reverse"
+                    android:repeatCount="infinite"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="strokeColor"
+                    android:duration="600"
+                    android:valueFrom="#848A94"
+                    android:valueTo="#5A6CF3"
+                    android:startOffset="400"
+                    android:repeatMode="reverse"
+                    android:repeatCount="infinite"
+                    android:valueType="colorType"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>

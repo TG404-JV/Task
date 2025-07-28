@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SocietyManagment" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.SocietyManagment" parent="Base.Theme.SocietyManagment" />
+
+
+    <style name="list_card_secondary">
+        <item name="cardBackgroundColor">@color/card_bg</item>
+        <item name="strokeColor">@color/stroke_color</item>
+        <item name="cardCornerRadius">10dp</item>
+        <item name="android:layout_marginBottom">7dp</item>
+    </style>
+</resources>

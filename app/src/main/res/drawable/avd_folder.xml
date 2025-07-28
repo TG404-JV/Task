@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="22dp"
+            android:height="22dp"
+            android:viewportWidth="22"
+            android:viewportHeight="22">
+
+            <!-- Folder background group -->
+            <group android:name="folder_group">
+                <path
+                    android:name="folder_outline"
+                    android:pathData="M20.419,14.732C20.419,18.31 18.31,20.419 14.732,20.419H6.95C3.363,20.419 1.25,18.31 1.25,14.732V6.932C1.25,3.359 2.564,1.25 6.143,1.25H8.143C8.861,1.251 9.537,1.588 9.967,2.163L10.88,3.377C11.312,3.951 11.988,4.289 12.706,4.29H15.536C19.123,4.29 20.447,6.116 20.447,9.767L20.419,14.732Z"
+                    android:strokeLineJoin="round"
+                    android:strokeWidth="1.5"
+                    android:fillColor="#00000000"
+                    android:fillType="evenOdd"
+                    android:strokeColor="#848A94"
+                    android:strokeLineCap="round"/>
+            </group>
+
+            <group android:name="line_group">
+                <path
+                    android:name="content_line"
+                    android:pathData="M6.481,13.463H15.216"
+                    android:strokeLineJoin="round"
+                    android:strokeWidth="1.5"
+                    android:fillColor="#00000000"
+                    android:strokeColor="#848A94"
+                    android:strokeLineCap="round"/>
+            </group>
+        </vector>
+    </aapt:attr>
+
+    <!-- Folder group scale animation -->
+    <target android:name="folder_group">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:duration="300"
+                    android:valueFrom="1.0"
+                    android:valueTo="1.05"
+                    android:repeatMode="reverse"
+                    android:repeatCount="1"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:duration="300"
+                    android:valueFrom="1.0"
+                    android:valueTo="1.05"
+                    android:repeatMode="reverse"
+                    android:repeatCount="1"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+            </set>
+        </aapt:attr>
+    </target>
+
+    <!-- Folder stroke color animation -->
+    <target android:name="folder_outline">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="strokeColor"
+                    android:duration="400"
+                    android:valueFrom="#848A94"
+                    android:valueTo="#5A6CF3"
+                    android:repeatMode="reverse"
+                    android:repeatCount="1"
+                    android:valueType="colorType"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="strokeWidth"
+                    android:duration="200"
+                    android:valueFrom="1.5"
+                    android:valueTo="2.0"
+                    android:repeatMode="reverse"
+                    android:repeatCount="1"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+            </set>
+        </aapt:attr>
+    </target>
+
+    <!-- Content line animation -->
+    <target android:name="content_line">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="trimPathStart"
+                    android:duration="500"
+                    android:valueFrom="0"
+                    android:valueTo="0"
+                    android:startOffset="100"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="trimPathEnd"
+                    android:duration="500"
+                    android:valueFrom="0"
+                    android:valueTo="1"
+                    android:startOffset="100"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="strokeColor"
+                    android:duration="400"
+                    android:valueFrom="#848A94"
+                    android:valueTo="#5A6CF3"
+                    android:startOffset="200"
+                    android:repeatMode="reverse"
+                    android:repeatCount="1"
+                    android:valueType="colorType"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="strokeWidth"
+                    android:duration="300"
+                    android:valueFrom="1.5"
+                    android:valueTo="2.5"
+                    android:startOffset="200"
+                    android:repeatMode="reverse"
+                    android:repeatCount="1"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+            </set>
+        </aapt:attr>
+    </target>
+
+</animated-vector>
