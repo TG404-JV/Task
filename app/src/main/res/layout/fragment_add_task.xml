@@ -86,6 +86,7 @@
         </RelativeLayout>
 
         <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rdIsImportant"
             android:layout_marginBottom="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -94,6 +95,7 @@
     </LinearLayout>
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/btnAddTask"
         android:layout_width="218dp"
         android:layout_height="48dp"
         app:cardBackgroundColor="@color/close_card_button"

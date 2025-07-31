@@ -20,8 +20,4 @@ object DatabaseHelper {
             instance
         }
     }
-
-
-
-
 }

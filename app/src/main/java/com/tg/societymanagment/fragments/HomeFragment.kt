@@ -64,10 +64,8 @@ class HomeFragment : Fragment() {
             subTaskRecyclerView.adapter = adapter2
         }
 
-
-
-
-
     }
+
+
 
 }

@@ -13,7 +13,8 @@ data class Task(
     val Title : String,
     val subTitle : String,
     val Category : String,
-    val time : String,
+    val startTime : String,
+    val endTIme : String,
     val isCompleted : Boolean,
     val isImportant : Boolean
 )

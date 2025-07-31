@@ -7,11 +7,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import androidx.lifecycle.lifecycleScope
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.timepicker.MaterialTimePicker
 import com.google.android.material.timepicker.TimeFormat
-import com.tg.societymanagment.R
+import com.tg.societymanagment.data.Task
 import com.tg.societymanagment.databinding.FragmentAddTaskBinding
+import com.tg.societymanagment.db.DatabaseHelper
+import com.tg.societymanagment.model.repositry.ListRepositry
+import kotlinx.coroutines.launch
 
 
 class AddTask : Fragment() {
@@ -55,6 +59,22 @@ class AddTask : Fragment() {
 
         binding.etEndTime.setOnClickListener {
             showTimePicker(binding.etEndTime)
+        }
+
+        binding.btnAddTask.setOnClickListener {
+            val title = binding.etMainTask.text.toString()
+            val subTitle = binding.etSubTask.text.toString()
+            val category = binding.etCategory.text.toString()
+            val startTime = binding.etStartTime.text.toString()
+            val endTime = binding.etEndTime.text.toString()
+            val isImportant = binding.rdIsImportant.isChecked
+
+            val db = DatabaseHelper.getDatabase(requireContext()).listDao()
+            val repo = ListRepositry(db)
+
+            lifecycleScope.launch {
+                repo.addTask(Task(0,title,subTitle,category,startTime,endTime,false,isImportant))
+            }
         }
     }
 

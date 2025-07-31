@@ -47,12 +47,12 @@ class TaskAdapter (val list : List<Task>) : RecyclerView.Adapter<RecyclerView.Vi
             is ImpViewHolder -> {
                 holder.title.text = item.Title
                 holder.subTitle.text = item.subTitle
-                holder.time.text = item.time
+                holder.time.text = item.startTime
             }
             is GeneralViewHolder -> {
                 holder.title.text = item.Title
                 holder.subTitle.text = item.subTitle
-                holder.time.text = item.time
+                holder.time.text = item.startTime
             }
 
         }
