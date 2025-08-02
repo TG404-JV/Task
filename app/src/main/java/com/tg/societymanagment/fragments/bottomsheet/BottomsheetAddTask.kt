@@ -30,12 +30,16 @@ class BottomsheetAddTask : BottomSheetDialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val frameLayout = binding.frameContainer
 
         binding.cvAddTask.setOnClickListener {
             findNavController().navigate(R.id.addTask)
             dismiss()
 
+        }
+
+        binding.cvAddProject.setOnClickListener {
+            findNavController().navigate(R.id.addProjectFragment)
+            dismiss()
         }
     }
 

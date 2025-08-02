@@ -46,5 +46,12 @@
         <action
             android:id="@+id/action_bottomsheetAddTask_to_addTask"
             app:destination="@id/addTask" />
+        <action
+            android:id="@+id/action_bottomsheetAddTask_to_addProjectFragment"
+            app:destination="@id/addProjectFragment" />
     </dialog>
+    <fragment
+        android:id="@+id/addProjectFragment"
+        android:name="com.tg.societymanagment.fragments.folder.AddProjectFragment"
+        android:label="AddProjectFragment" />
 </navigation>

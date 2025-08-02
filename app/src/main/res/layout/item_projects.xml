@@ -13,8 +13,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/tvtitle"
-            style="@style/TextAppearance.AppCompat.Body1"
+            android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Android App Development" />
@@ -22,7 +21,6 @@
 
         <TextView
             android:id="@+id/tvCategory"
-            style="@style/TextAppearance.AppCompat.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Android App Development" />

@@ -51,14 +51,14 @@ class FolderFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewmodel.projectList.observe(viewLifecycleOwner){
-            projectlist = it
-        }
-
         val recyclerView = binding.rvprojectTask
-        val adapter = ProjectAdapter(projectlist)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        recyclerView.adapter = adapter
+
+        viewmodel.projectList.observe(viewLifecycleOwner) {
+            projectlist = it
+            val adapter = ProjectAdapter(projectlist)
+            recyclerView.adapter = adapter
+        }
     }
 
 

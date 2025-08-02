@@ -5,9 +5,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.tg.societymanagment.model.repositry.ProjectRepo
 import java.lang.IllegalArgumentException
 
-
-
-//Can Be Minimize It
 class ProjectFactory(private val repositry : ProjectRepo) : ViewModelProvider.Factory {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

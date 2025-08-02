@@ -9,4 +9,5 @@
     <color name="card_bg">#fff</color>
     <color name="stroke_color">#E9F1FF</color>
     <color name="close_card_button">#756EF3</color>
+    <color name="icon_tint_light_mode">#FF000000</color>
 </resources>
